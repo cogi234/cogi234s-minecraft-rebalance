@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "cogi234rebalance",
+	"version": "${version}",
+	"name": "Cogi234s Rebalance",
+	"description": "This is my mod to rebalance minecraft.",
+	"authors": [
+		"cogi234"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/cogi234rebalance/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"cogi234.rebalance.Cogi234sRebalance"
+		],
+		"client": [
+			"cogi234.rebalance.Cogi234sRebalanceClient"
+		],
+		"fabric-datagen": [
+			"cogi234.rebalance.Cogi234sRebalanceDataGenerator"
+		]
+	},
+	"mixins": [
+		"cogi234rebalance.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
