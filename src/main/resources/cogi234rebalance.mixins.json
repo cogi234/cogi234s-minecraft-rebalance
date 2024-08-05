@@ -3,7 +3,9 @@
 	"package": "cogi234.rebalance.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"AnvilMixin"
+		"AnvilMixin",
+		"SleepManagerMixin",
+		"ServerPlayerEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

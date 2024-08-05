@@ -17,4 +17,8 @@ public class ConfigModel {
     public int materialCountToFullyRepair = 1;
     //Can you level up enchants by combining 2 of the same level
     public boolean enchantsCanLevelUp = false;
+
+    @SectionHeader("Sleep")
+    public boolean sleepCanSkipNight = false;
+    public boolean bedCanSetSpawn = false;
 }
