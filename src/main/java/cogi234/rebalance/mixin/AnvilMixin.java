@@ -33,11 +33,6 @@ public abstract class AnvilMixin extends ForgingScreenHandler{
         super(type, syncId, playerInventory, context);
     }
 
-    @Inject(method = "updateResult()V", at = @At("HEAD"))
-    private void processBegin(CallbackInfo ci){
-        Cogi234sRebalance.LOGGER.info("=================");
-    }
-
     //Ignore accumulated repair costs when calculating the total experience cost
     @ModifyVariable(method = "updateResult()V", at = @At(value = "STORE", ordinal = 4), ordinal = 2)
     private int ignoreAccumulatedRepairCosts(int t, @Local(ordinal = 0) int i) {
