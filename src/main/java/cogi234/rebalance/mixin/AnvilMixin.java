@@ -36,7 +36,7 @@ public abstract class AnvilMixin extends ForgingScreenHandler{
     //Ignore accumulated repair costs when calculating the total experience cost
     @ModifyVariable(method = "updateResult()V", at = @At(value = "STORE", ordinal = 4), ordinal = 2)
     private int ignoreAccumulatedRepairCosts(int t, @Local(ordinal = 0) int i) {
-        if (Cogi234sRebalance.repairsAccumulateCost)
+        if (Cogi234sRebalance.CONFIG.repairsAccumulateCost())
             return t;
         else
             return i;
@@ -45,7 +45,7 @@ public abstract class AnvilMixin extends ForgingScreenHandler{
     //Stop accumulating repair costs
     @Inject(method = "updateResult()V", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;set(Lnet/minecraft/component/ComponentType;Ljava/lang/Object;)Ljava/lang/Object;", shift = At.Shift.AFTER, ordinal = 1))
     private void stopAccumulatingRepairCosts(CallbackInfo ci, @Local(ordinal = 1) ItemStack itemStack2){
-        if (!Cogi234sRebalance.repairsAccumulateCost)
+        if (!Cogi234sRebalance.CONFIG.repairsAccumulateCost())
             itemStack2.remove(DataComponentTypes.REPAIR_COST);
     }
 
@@ -53,7 +53,7 @@ public abstract class AnvilMixin extends ForgingScreenHandler{
     @Redirect(method = "updateResult()V", at = @At(value = "INVOKE", target = "Ljava/lang/Math;min(II)I"))
     private int modifyRepairAmount(int a, int b, @Local(ordinal = 1) ItemStack itemStack2){
         if (a == itemStack2.getDamage() && b <= itemStack2.getMaxDamage())
-            return Math.min(itemStack2.getDamage(), itemStack2.getMaxDamage() / Cogi234sRebalance.materialCountToFullyRepair);
+            return Math.min(itemStack2.getDamage(), itemStack2.getMaxDamage() / Cogi234sRebalance.CONFIG.materialCountToFullyRepair());
         else
             return Math.min(a, b);
     }
@@ -61,14 +61,14 @@ public abstract class AnvilMixin extends ForgingScreenHandler{
     //Stop enchants from levelling up when you combine two with the same level
     @ModifyVariable(method = "updateResult()V", at = @At(value = "STORE", ordinal = 3), ordinal = 2)
     private int dontLevelUpEnchants1(int q, @Local ItemEnchantmentsComponent.Builder builder, @Local RegistryEntry<Enchantment> registryEntry){
-        if (Cogi234sRebalance.enchantsCanLevelUp)
+        if (Cogi234sRebalance.CONFIG.enchantsCanLevelUp())
             return builder.getLevel(registryEntry);
         else
             return 0;
     }
     @ModifyVariable(method = "updateResult()V", at = @At(value = "STORE", ordinal = 3), ordinal = 3)
     private int dontLevelUpEnchants2(int r, @Local ItemEnchantmentsComponent.Builder builder, @Local RegistryEntry<Enchantment> registryEntry, @Local Object2IntMap.Entry<RegistryEntry<Enchantment>> entry){
-        if (Cogi234sRebalance.enchantsCanLevelUp)
+        if (Cogi234sRebalance.CONFIG.enchantsCanLevelUp())
             return entry.getIntValue();
         else
             return Math.max(entry.getIntValue(), builder.getLevel(registryEntry));

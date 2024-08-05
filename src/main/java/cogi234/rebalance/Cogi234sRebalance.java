@@ -1,5 +1,6 @@
 package cogi234.rebalance;
 
+import cogi234.rebalance.util.Cogi234sRebalanceConfig;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -12,13 +13,8 @@ public class Cogi234sRebalance implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	//ANVIL
-	//Do repairs cost more and more when done on the same object
-	public static boolean repairsAccumulateCost = false;
-	//How many diamonds to fully repair a diamond sword
-	public static int materialCountToFullyRepair = 1;
-	//Can you level up enchants by combining 2 of the same level
-	public static boolean enchantsCanLevelUp = false;
+	// CONFIG
+	public static final Cogi234sRebalanceConfig CONFIG = Cogi234sRebalanceConfig.createAndLoad();
 
 	@Override
 	public void onInitialize() {
