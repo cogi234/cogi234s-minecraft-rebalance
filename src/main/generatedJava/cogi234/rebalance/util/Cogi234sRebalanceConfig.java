@@ -16,6 +16,9 @@ public class Cogi234sRebalanceConfig extends ConfigWrapper<cogi234.rebalance.uti
     private final Option<java.lang.Boolean> repairsAccumulateCost = this.optionForKey(this.keys.repairsAccumulateCost);
     private final Option<java.lang.Integer> materialCountToFullyRepair = this.optionForKey(this.keys.materialCountToFullyRepair);
     private final Option<java.lang.Boolean> enchantsCanLevelUp = this.optionForKey(this.keys.enchantsCanLevelUp);
+    private final Option<java.lang.Boolean> sleepCanSkipNight = this.optionForKey(this.keys.sleepCanSkipNight);
+    private final Option<java.lang.Boolean> bedCanSetSpawn = this.optionForKey(this.keys.bedCanSetSpawn);
+    private final Option<java.lang.Integer> minecartMaxSpeed = this.optionForKey(this.keys.minecartMaxSpeed);
 
     private Cogi234sRebalanceConfig() {
         super(cogi234.rebalance.util.ConfigModel.class);
@@ -61,11 +64,38 @@ public class Cogi234sRebalanceConfig extends ConfigWrapper<cogi234.rebalance.uti
         enchantsCanLevelUp.set(value);
     }
 
+    public boolean sleepCanSkipNight() {
+        return sleepCanSkipNight.value();
+    }
+
+    public void sleepCanSkipNight(boolean value) {
+        sleepCanSkipNight.set(value);
+    }
+
+    public boolean bedCanSetSpawn() {
+        return bedCanSetSpawn.value();
+    }
+
+    public void bedCanSetSpawn(boolean value) {
+        bedCanSetSpawn.set(value);
+    }
+
+    public int minecartMaxSpeed() {
+        return minecartMaxSpeed.value();
+    }
+
+    public void minecartMaxSpeed(int value) {
+        minecartMaxSpeed.set(value);
+    }
+
 
     public static class Keys {
         public final Option.Key repairsAccumulateCost = new Option.Key("repairsAccumulateCost");
         public final Option.Key materialCountToFullyRepair = new Option.Key("materialCountToFullyRepair");
         public final Option.Key enchantsCanLevelUp = new Option.Key("enchantsCanLevelUp");
+        public final Option.Key sleepCanSkipNight = new Option.Key("sleepCanSkipNight");
+        public final Option.Key bedCanSetSpawn = new Option.Key("bedCanSetSpawn");
+        public final Option.Key minecartMaxSpeed = new Option.Key("minecartMaxSpeed");
     }
 }
 

@@ -1,15 +1,9 @@
 package cogi234.rebalance;
 
 import cogi234.rebalance.util.Cogi234sRebalanceConfig;
-import cogi234.rebalance.util.ModTags;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.util.Set;
 
 public class Cogi234sRebalance implements ModInitializer {
 	public static final String MOD_ID = "cogi234rebalance";

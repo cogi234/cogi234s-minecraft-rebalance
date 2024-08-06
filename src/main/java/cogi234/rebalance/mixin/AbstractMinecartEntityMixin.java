@@ -1,7 +1,6 @@
 package cogi234.rebalance.mixin;
 
 import cogi234.rebalance.Cogi234sRebalance;
-import cogi234.rebalance.util.Cogi234sRebalanceConfig;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.block.AbstractRailBlock;
 import net.minecraft.block.PoweredRailBlock;
@@ -96,7 +95,7 @@ public abstract class AbstractMinecartEntityMixin extends VehicleEntity {
         World world = this.getWorld();
 
         final double tps = 20.;
-        final double maxSpeed = Cogi234sRebalance.CONFIG.minecartMaxSpeed() / tps;
+        final double maxSpeed = ((double)Cogi234sRebalance.CONFIG.minecartMaxSpeed()) / tps;
         final double maxMomentum = maxSpeed * 5.;
         final double vanillaMaxSpeed = 8. / tps;
         final double vanillaMaxMomentum = 40. / tps;

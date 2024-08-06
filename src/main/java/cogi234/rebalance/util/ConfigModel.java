@@ -23,6 +23,6 @@ public class ConfigModel {
     public boolean bedCanSetSpawn = false;
 
     @SectionHeader("Minecart")
-    @RangeConstraint(min = 8, max = 34)
+    @RangeConstraint(min = 8, max = 100)
     public int minecartMaxSpeed = 30;
 }
