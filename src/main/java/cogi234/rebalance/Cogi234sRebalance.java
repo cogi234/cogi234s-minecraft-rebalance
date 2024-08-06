@@ -20,5 +20,12 @@ public class Cogi234sRebalance implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
+
+		/* This is for Regedit, which is not out for 1.21 yet
+		RegistryEditEvent.EVENT.register(manipulator -> {
+			//This should replace the vanilla packed ice with our own custom packed ice
+			manipulator.Redirect(Registries.BLOCK, Blocks.PACKED_ICE, ModBlocks.PACKED_ICE);
+		});
+		 */
 	}
 }
