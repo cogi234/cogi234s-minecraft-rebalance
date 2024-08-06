@@ -5,7 +5,8 @@
 	"mixins": [
 		"AnvilMixin",
 		"SleepManagerMixin",
-		"ServerPlayerEntityMixin"
+		"ServerPlayerEntityMixin",
+		"AbstractMinecartEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
