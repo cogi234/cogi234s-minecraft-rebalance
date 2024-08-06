@@ -3,11 +3,6 @@ package cogi234.rebalance.util;
 import cogi234.rebalance.PackedIceBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
-import net.minecraft.entity.EntityType;
-import net.minecraft.registry.MutableRegistry;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.sound.BlockSoundGroup;
 
 public class ModBlocks {
