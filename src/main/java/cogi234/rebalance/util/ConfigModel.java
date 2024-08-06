@@ -21,4 +21,8 @@ public class ConfigModel {
     @SectionHeader("Sleep")
     public boolean sleepCanSkipNight = false;
     public boolean bedCanSetSpawn = false;
+
+    @SectionHeader("Minecart")
+    @RangeConstraint(min = 8, max = 34)
+    public int minecartMaxSpeed = 30;
 }
