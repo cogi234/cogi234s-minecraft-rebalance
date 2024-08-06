@@ -1,6 +1,7 @@
 package cogi234.rebalance;
 
 import cogi234.rebalance.util.Cogi234sRebalanceConfig;
+import cogi234.rebalance.util.ModLootTableModifiers;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +21,8 @@ public class Cogi234sRebalance implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
+
+		ModLootTableModifiers.modifyLootTables();
 
 		/* This is for Regedit, which is not out for 1.21 yet
 		RegistryEditEvent.EVENT.register(manipulator -> {
