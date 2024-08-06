@@ -3,12 +3,16 @@
 	"package": "cogi234.rebalance.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
+		"AbstractMinecartEntityMixin",
 		"AnvilMixin",
-		"SleepManagerMixin",
+		"EnchantmentScreenHandlerMixin",
 		"ServerPlayerEntityMixin",
-		"AbstractMinecartEntityMixin"
+		"SleepManagerMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
-	}
+	},
+	"client": [
+		"EnchantmentScreenMixin"
+	]
 }

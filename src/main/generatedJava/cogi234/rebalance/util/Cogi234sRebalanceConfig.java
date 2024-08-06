@@ -19,6 +19,7 @@ public class Cogi234sRebalanceConfig extends ConfigWrapper<cogi234.rebalance.uti
     private final Option<java.lang.Boolean> sleepCanSkipNight = this.optionForKey(this.keys.sleepCanSkipNight);
     private final Option<java.lang.Boolean> bedCanSetSpawn = this.optionForKey(this.keys.bedCanSetSpawn);
     private final Option<java.lang.Integer> minecartMaxSpeed = this.optionForKey(this.keys.minecartMaxSpeed);
+    private final Option<java.lang.Integer> enchantingCost = this.optionForKey(this.keys.enchantingCost);
 
     private Cogi234sRebalanceConfig() {
         super(cogi234.rebalance.util.ConfigModel.class);
@@ -88,6 +89,14 @@ public class Cogi234sRebalanceConfig extends ConfigWrapper<cogi234.rebalance.uti
         minecartMaxSpeed.set(value);
     }
 
+    public int enchantingCost() {
+        return enchantingCost.value();
+    }
+
+    public void enchantingCost(int value) {
+        enchantingCost.set(value);
+    }
+
 
     public static class Keys {
         public final Option.Key repairsAccumulateCost = new Option.Key("repairsAccumulateCost");
@@ -96,6 +105,7 @@ public class Cogi234sRebalanceConfig extends ConfigWrapper<cogi234.rebalance.uti
         public final Option.Key sleepCanSkipNight = new Option.Key("sleepCanSkipNight");
         public final Option.Key bedCanSetSpawn = new Option.Key("bedCanSetSpawn");
         public final Option.Key minecartMaxSpeed = new Option.Key("minecartMaxSpeed");
+        public final Option.Key enchantingCost = new Option.Key("enchantingCost");
     }
 }
 

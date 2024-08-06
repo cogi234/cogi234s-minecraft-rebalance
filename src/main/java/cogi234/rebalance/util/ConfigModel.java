@@ -25,4 +25,8 @@ public class ConfigModel {
     @SectionHeader("Minecart")
     @RangeConstraint(min = 8, max = 100)
     public int minecartMaxSpeed = 30;
+
+    @SectionHeader("Enchanting")
+    @RangeConstraint(min = 1, max = 3)
+    public int enchantingCost = 3;
 }
