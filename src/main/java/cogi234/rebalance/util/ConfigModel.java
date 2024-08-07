@@ -23,6 +23,7 @@ public class ConfigModel {
     public boolean bedCanSetSpawn = false;
 
     @SectionHeader("Phantoms")
+    public boolean overwritePhantomSpawning = true;
     public int minPhantomSpawnCooldown = 60;
     public int maxPhantomSpawnCooldown = 120;
     public float phantomSpawnChance = 0.25F;
