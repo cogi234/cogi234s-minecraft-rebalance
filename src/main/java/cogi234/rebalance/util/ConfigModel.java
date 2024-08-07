@@ -22,6 +22,12 @@ public class ConfigModel {
     public boolean sleepCanSkipNight = false;
     public boolean bedCanSetSpawn = false;
 
+    @SectionHeader("Phantoms")
+    public int minPhantomSpawnCooldown = 60;
+    public int maxPhantomSpawnCooldown = 120;
+    public float phantomSpawnChance = 0.25F;
+    public boolean phantomsSpawnWithNightVision = false;
+
     @SectionHeader("Minecart")
     @RangeConstraint(min = 8, max = 100)
     public int minecartMaxSpeed = 30;

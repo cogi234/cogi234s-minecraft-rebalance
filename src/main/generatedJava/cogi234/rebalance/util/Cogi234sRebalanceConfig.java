@@ -18,6 +18,10 @@ public class Cogi234sRebalanceConfig extends ConfigWrapper<cogi234.rebalance.uti
     private final Option<java.lang.Boolean> enchantsCanLevelUp = this.optionForKey(this.keys.enchantsCanLevelUp);
     private final Option<java.lang.Boolean> sleepCanSkipNight = this.optionForKey(this.keys.sleepCanSkipNight);
     private final Option<java.lang.Boolean> bedCanSetSpawn = this.optionForKey(this.keys.bedCanSetSpawn);
+    private final Option<java.lang.Integer> minPhantomSpawnCooldown = this.optionForKey(this.keys.minPhantomSpawnCooldown);
+    private final Option<java.lang.Integer> maxPhantomSpawnCooldown = this.optionForKey(this.keys.maxPhantomSpawnCooldown);
+    private final Option<java.lang.Float> phantomSpawnChance = this.optionForKey(this.keys.phantomSpawnChance);
+    private final Option<java.lang.Boolean> phantomsSpawnWithNightVision = this.optionForKey(this.keys.phantomsSpawnWithNightVision);
     private final Option<java.lang.Integer> minecartMaxSpeed = this.optionForKey(this.keys.minecartMaxSpeed);
     private final Option<java.lang.Integer> enchantingCost = this.optionForKey(this.keys.enchantingCost);
 
@@ -81,6 +85,38 @@ public class Cogi234sRebalanceConfig extends ConfigWrapper<cogi234.rebalance.uti
         bedCanSetSpawn.set(value);
     }
 
+    public int minPhantomSpawnCooldown() {
+        return minPhantomSpawnCooldown.value();
+    }
+
+    public void minPhantomSpawnCooldown(int value) {
+        minPhantomSpawnCooldown.set(value);
+    }
+
+    public int maxPhantomSpawnCooldown() {
+        return maxPhantomSpawnCooldown.value();
+    }
+
+    public void maxPhantomSpawnCooldown(int value) {
+        maxPhantomSpawnCooldown.set(value);
+    }
+
+    public float phantomSpawnChance() {
+        return phantomSpawnChance.value();
+    }
+
+    public void phantomSpawnChance(float value) {
+        phantomSpawnChance.set(value);
+    }
+
+    public boolean phantomsSpawnWithNightVision() {
+        return phantomsSpawnWithNightVision.value();
+    }
+
+    public void phantomsSpawnWithNightVision(boolean value) {
+        phantomsSpawnWithNightVision.set(value);
+    }
+
     public int minecartMaxSpeed() {
         return minecartMaxSpeed.value();
     }
@@ -104,6 +140,10 @@ public class Cogi234sRebalanceConfig extends ConfigWrapper<cogi234.rebalance.uti
         public final Option.Key enchantsCanLevelUp = new Option.Key("enchantsCanLevelUp");
         public final Option.Key sleepCanSkipNight = new Option.Key("sleepCanSkipNight");
         public final Option.Key bedCanSetSpawn = new Option.Key("bedCanSetSpawn");
+        public final Option.Key minPhantomSpawnCooldown = new Option.Key("minPhantomSpawnCooldown");
+        public final Option.Key maxPhantomSpawnCooldown = new Option.Key("maxPhantomSpawnCooldown");
+        public final Option.Key phantomSpawnChance = new Option.Key("phantomSpawnChance");
+        public final Option.Key phantomsSpawnWithNightVision = new Option.Key("phantomsSpawnWithNightVision");
         public final Option.Key minecartMaxSpeed = new Option.Key("minecartMaxSpeed");
         public final Option.Key enchantingCost = new Option.Key("enchantingCost");
     }

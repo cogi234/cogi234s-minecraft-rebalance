@@ -3,6 +3,7 @@ package cogi234.rebalance;
 import cogi234.rebalance.util.Cogi234sRebalanceConfig;
 import cogi234.rebalance.util.ModLootTableModifiers;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.registry.Registries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,18 +1,19 @@
 {
-	"required": true,
-	"package": "cogi234.rebalance.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"AbstractMinecartEntityMixin",
-		"AnvilMixin",
-		"EnchantmentScreenHandlerMixin",
-		"ServerPlayerEntityMixin",
-		"SleepManagerMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"client": [
-		"EnchantmentScreenMixin"
+  "required": true,
+  "package": "cogi234.rebalance.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AbstractMinecartEntityMixin",
+    "AnvilMixin",
+    "EnchantmentScreenHandlerMixin",
+    "PhantomSpawnerMixin",
+    "ServerPlayerEntityMixin",
+    "SleepManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "EnchantmentScreenMixin"
 	]
 }
