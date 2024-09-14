@@ -55,7 +55,7 @@ dependencies {
 
 	// regedit
 	// commented out because it's not out for 1.21 yet
-	//include modImplementation("maven.modrinth:regedit:1.0.2")
+	include modImplementation("maven.modrinth:regedit:1.0.2")
 }
 
 processResources {

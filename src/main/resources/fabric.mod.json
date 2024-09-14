@@ -29,13 +29,11 @@
 		"cogi234rebalance.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.15.11",
-		"minecraft": "~1.21",
+		"fabricloader": ">=${loader_version}",
+		"minecraft": "~${minecraft_version}",
 		"java": ">=21",
 		"fabric-api": "*",
-		"owo": ">=0.12.10+1.21"
-	},
-	"suggests": {
-		"another-mod": "*"
+		"owo": ">=0.12.10+1.21",
+		"regedit": ">=1.0"
 	}
 }
