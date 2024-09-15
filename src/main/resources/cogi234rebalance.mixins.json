@@ -5,11 +5,12 @@
   "mixins": [
     "AbstractMinecartEntityMixin",
     "AnvilMixin",
+    "ArmorItemMixin",
     "EnchantmentScreenHandlerMixin",
     "PhantomSpawnerMixin",
     "ServerPlayerEntityMixin",
     "SleepManagerMixin",
-    "ToolMaterialsMixin"
+    "ToolItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1
